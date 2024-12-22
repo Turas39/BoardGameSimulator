@@ -65,6 +65,21 @@ class Board
         }
     }
 }
+
+class Barbarian : Player
+{
+    public Barbarian(string name) { Name = name; }
+}
+
+class Mage : Player
+{
+    public Mage(string name) { Name = name; }
+}
+
+class Necromancer : Player
+{
+    public Necromancer(string name) { Name = name; }
+}
 internal class Program
 {
     public static void Main(string[] args)
