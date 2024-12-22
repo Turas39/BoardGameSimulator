@@ -153,6 +153,16 @@ internal class Program
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        Game game = new Game(50);
+        game.AddPlayer(new Barbarian("Barbarian Johnny"));
+        game.AddPlayer(new Mage("Mage Ciri"));
+        game.AddPlayer(new Necromancer("Necromancer Turas"));
+            
+        game.OnPlayerReward += (player, reward) =>
+        {
+            Console.WriteLine($"Specjalny Event: {player.Name} zdobywa {reward} punktów!");
+        };
+
+        game.Start();
     }
 }
